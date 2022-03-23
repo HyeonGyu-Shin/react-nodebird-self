@@ -1,12 +1,18 @@
 import React from "react";
+import Head from "next/head";
 
-import "../styles/style.scss";
+import "antd/dist/antd.css";
 
 const NodeBird = ({ Component }) => {
   return (
-    <div>
-      <Component></Component>
-    </div>
+    <>
+      <Head>
+        <title>Nodebird</title>
+      </Head>
+      <div>
+        <Component></Component>
+      </div>
+    </>
   );
 };
 

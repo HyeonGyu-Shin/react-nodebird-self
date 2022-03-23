@@ -1,12 +1,11 @@
 import React from "react";
-
-import Layout from "../layouts/layout";
+import PageLayout from "../layouts/pageLayout";
 
 const Home = () => {
   return (
-    <Layout>
+    <PageLayout current={"home"}>
       <div className="hi">hello world</div>
-    </Layout>
+    </PageLayout>
   );
 };
 

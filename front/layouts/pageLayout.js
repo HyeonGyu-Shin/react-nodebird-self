@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 
 import { Col, Input, Menu, Row } from "antd";
 import LoginForm from "../components/login/LoginForm";
+import UserProfile from "../components/login/UserProfile";
 
 const PageLayout = ({ children, current }) => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
     <>
       <Menu selectedKeys={[current]} mode="horizontal">
@@ -34,7 +37,11 @@ const PageLayout = ({ children, current }) => {
       </Menu>
       <Row style={{ textAlign: "center" }} gutter={8}>
         <Col xs={6}>
-          <LoginForm></LoginForm>
+          {isLoggedIn ? (
+            <UserProfile setIsLoggedIn={setIsLoggedIn} />
+          ) : (
+            <LoginForm setIsLoggedIn={setIsLoggedIn} />
+          )}
         </Col>
         <Col xs={12}>{children}</Col>
         <Col xs={6}>오른쪽 메뉴</Col>

@@ -1,10 +1,14 @@
 import React from "react";
+import Head from "next/head";
+
 import PageLayout from "../layouts/pageLayout";
 
 const signup = () => {
   return (
     <PageLayout current={"signup"}>
-      <div>회원가입 페이지</div>
+      <Head>
+        <title>회원가입 | nodebird</title>
+      </Head>
     </PageLayout>
   );
 };

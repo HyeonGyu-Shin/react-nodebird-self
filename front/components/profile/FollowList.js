@@ -1,5 +1,6 @@
 import React from "react";
 import { List, Card } from "antd";
+import { StopOutlined } from "@ant-design/icons";
 
 const FollowList = ({ header, data }) => {
   return (
@@ -11,7 +12,7 @@ const FollowList = ({ header, data }) => {
         dataSource={data}
         renderItem={(item) => (
           <List.Item>
-            <Card title={item.nickname}></Card>
+            <Card actions={[<StopOutlined key="stop" />]}>{item.nickname}</Card>
           </List.Item>
         )}
       />

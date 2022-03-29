@@ -35,7 +35,7 @@ const PageLayout = ({ children, current }) => {
           />
         </Menu.Item>
       </Menu>
-      <Row style={{ textAlign: "center" }} gutter={8}>
+      <Row gutter={8}>
         <Col xs={6}>
           {isLoggedIn ? (
             <UserProfile setIsLoggedIn={setIsLoggedIn} />
